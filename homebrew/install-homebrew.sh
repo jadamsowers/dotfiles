@@ -1,36 +1,17 @@
 #!/bin/bash
-PACKAGES=(
-    "bash-completion"
-    "colordiff"
-    "cowsay"
-    "dos2unix"
-    "fortune"
-    "git-flow"
-    "htop"
-    "lolcat"
-    "lynx"
-    "ncdu"
-    "nmap"
-    "tig"
-    "tmux"
-    "tree"
-    "vimpager"
-    "wget"
-)
 
-CASKS=(
-    "dropbox"
-    "google-chrome"
-    "iterm2"
-    "skype"
-    "slack"
-    "the-unarchiver"
-    "virtualbox"
-    "visual-studio-code"
-)
+scriptdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-echo "Installing homebrew"
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+IFS=$'\r\n' GLOBIGNORE='*' command eval 'packages=($(cat $scriptdir/packages))'
+IFS=$'\r\n' GLOBIGNORE='*' command eval 'casks=($(cat $scriptdir/casks))'
+
+if [ -x "$(command -v brew)" ]
+then
+    echo "It seems homebrew is already installed. Skipping."
+else
+    echo "Installing homebrew"
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
 
 echo "Updating homebrew"
 brew update
@@ -40,13 +21,13 @@ brew tap caskroom/cask
 
 echo "Installing packages"
 #printf -v packages "%s\n" "${PACKAGES[*]}"
-for package in "${PACKAGES[@]}"
+for package in "${packages[@]}"
 do
     brew install $package
 done
 
 echo "Installing casks"
-for cask in "${CASKS[@]}"
+for cask in "${casks[@]}"
 do 
     brew cask install $cask
 done

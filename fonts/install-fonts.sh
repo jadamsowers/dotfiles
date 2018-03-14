@@ -1,13 +1,12 @@
 #!/bin/bash
 
+scriptdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 echo "Cloning Powerline fonts git repository"
 git clone https://github.com/powerline/fonts/ ~/fonts
 
-declare -a fonts=(
-                  "Hack"
-                  "SourceCodePro"
-                  "UbuntuMono"
-                 )
+# load contents of fontlist into array
+IFS=$'\r\n' GLOBIGNORE='*' command eval  'fonts=($(cat $scriptdir/fontlist))'
                 
 for font in "${fonts[@]}"
 do

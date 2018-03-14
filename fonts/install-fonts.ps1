@@ -5,7 +5,7 @@ function Get-ScriptDirectory
 }
 
 $fontsDir = "$($env:USERPROFILE)\fonts"
-$fontsToInstall = get-content (join-path (Get-ScriptDirectory) "fontlist.txt")
+$fontsToInstall = get-content (join-path (Get-ScriptDirectory) "fontlist")
 
 git clone https://github.com/powerline/fonts.git $fontsDir
 
