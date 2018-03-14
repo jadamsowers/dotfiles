@@ -14,3 +14,4 @@ do
     echo "Installing $font"
     cp -R ~/fonts/$font/*.*tf ~/Library/Fonts
 done
+
