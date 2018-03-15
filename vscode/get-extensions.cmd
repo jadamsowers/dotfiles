@@ -1,0 +1,1 @@
+for /F "tokens=*" %i in ('code --list-extensions') do @echo call code --install-extension %i >> install.cmd
