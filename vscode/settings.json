@@ -1,0 +1,21 @@
+{
+    "powershell.powerShellExePath": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "atomKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": true,
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.statusBar.feedback.visible": false,
+    "workbench.colorTheme": "Atom One Dark",
+    "gitlens.keymap": "alternate",
+    "editor.fontFamily": "Consolas",
+    "editor.fontLigatures": true,
+    "editor.renderWhitespace": "all",
+    "terminal.integrated.fontFamily": "Consolas",
+    "terminal.integrated.fontSize": 14,
+
+    "terraform.format": 
+    {
+        "enable": false
+    },
+}
