@@ -1,8 +1,11 @@
+ack
 bash-completion
 colordiff
 cowsay
+Diff-so-fancy
 dos2unix
 fortune
+fzf
 git-flow
 htop
 libdvdcss
@@ -11,6 +14,7 @@ lynx
 mas
 ncdu
 nmap
+prettyping
 tig
 tmux
 tree
