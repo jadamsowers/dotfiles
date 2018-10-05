@@ -16,8 +16,11 @@ fi
 echo "Updating homebrew"
 brew update
 
-echo "Installing homebrew cask"
+echo "Tapping homebrew cask"
 brew tap caskroom/cask
+
+echo "Tapping homebrew cask: fonts"
+brew tap caskroom/cask-fonts
 
 echo "Installing packages"
 #printf -v packages "%s\n" "${PACKAGES[*]}"
