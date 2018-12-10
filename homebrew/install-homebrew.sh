@@ -20,7 +20,7 @@ echo "Tapping homebrew cask"
 brew tap caskroom/cask
 
 echo "Tapping homebrew cask: fonts"
-brew tap caskroom/cask-fonts
+brew tap homebrew/cask-fonts
 
 echo "Installing packages"
 #printf -v packages "%s\n" "${PACKAGES[*]}"
